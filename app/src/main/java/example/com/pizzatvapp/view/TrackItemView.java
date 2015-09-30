@@ -41,6 +41,9 @@ public class TrackItemView extends LinearLayout {
 
     public void bind(TrackItem trackItem) {
         mTitle.setText(trackItem.getTitle());
-        mDescription.setText(trackItem.getDescription());
+        if(trackItem.getDescription() != null) {
+            mDescription.setText(trackItem.getDescription());
+            mDescription.setVisibility(VISIBLE);
+        }
     }
 }
