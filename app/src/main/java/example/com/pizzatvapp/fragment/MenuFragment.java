@@ -59,7 +59,7 @@ public class MenuFragment extends BrowseFragment {
         HeaderItem easyOrderHeader = new HeaderItem(0, "EASY ORDER");
         HistoricalItemPresenter easyOrderHeaderPresenter = new HistoricalItemPresenter();
         ArrayObjectAdapter easyOrderHeaderRowAdapter = new ArrayObjectAdapter(easyOrderHeaderPresenter);
-        easyOrderHeaderRowAdapter.add("MY FAVORITE");
+        easyOrderHeaderRowAdapter.add("My Favorite");
         mRowsAdapter.add(new ListRow(easyOrderHeader, easyOrderHeaderRowAdapter));
 
         HeaderItem recentOrderHeader = new HeaderItem(1, "RECENT ORDERS");

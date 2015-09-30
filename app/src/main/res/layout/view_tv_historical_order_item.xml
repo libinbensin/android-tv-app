@@ -4,16 +4,8 @@
     android:layout_width="@dimen/tv_view_width"
     android:layout_height="@dimen/tv_view_height"
     android:gravity="center"
-    android:background="@color/material_deep_teal_500">
+    android:background="#2196F3">
 
-    <TextView
-        android:id="@+id/historical_order_tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:text="My Favorite"
-        android:textSize="18sp"
-        android:textStyle="bold|italic"/>
 
     <TextView
         android:id="@+id/historical_order_tv_description"
@@ -23,5 +15,16 @@
         android:padding="5dp"
         android:layout_marginTop="10dp"
         android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/historical_order_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="My Favorite"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        android:background="#F44336"/>
 
 </LinearLayout>
