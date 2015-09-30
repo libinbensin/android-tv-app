@@ -15,6 +15,8 @@ public class HistoricalItemPresenter extends Presenter {
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent) {
         HistoricalOrderItemView historicalOrderItemView = HistoricalOrderItemView_.build(parent.getContext());
+        historicalOrderItemView.setFocusable(true);
+        historicalOrderItemView.setFocusableInTouchMode(true);
         return new ViewHolder(historicalOrderItemView);
     }
 

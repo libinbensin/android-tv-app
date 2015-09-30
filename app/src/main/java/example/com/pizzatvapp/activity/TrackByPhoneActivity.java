@@ -73,9 +73,9 @@ public class TrackByPhoneActivity extends Activity{
         // track order
         hideSoftKeyboard();
 
-        TrackerTvActivity_.intent(this).start();
-        finish();
-        //showErrorFragment();
+//        TrackerTvActivity_.intent(this).start();
+//        finish();
+        showErrorFragment();
 
     }
 

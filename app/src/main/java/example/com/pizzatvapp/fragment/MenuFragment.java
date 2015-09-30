@@ -86,13 +86,11 @@ public class MenuFragment extends BrowseFragment {
         settingsRowAdapter.add("SIGN IN");
         settingsRowAdapter.add("PRIVACY POLICY");
         settingsRowAdapter.add("TERMS OF SERVICE");
-
         mRowsAdapter.add(new ListRow(loginHeader, settingsRowAdapter));
 
         setAdapter(mRowsAdapter);
 
-        //setOnItemViewClickedListener(new ItemViewClickedListener());
-
+        setOnItemViewClickedListener(new ItemViewClickedListener());
     }
 
 

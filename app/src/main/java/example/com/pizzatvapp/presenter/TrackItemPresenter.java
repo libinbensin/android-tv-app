@@ -14,6 +14,8 @@ public class TrackItemPresenter extends Presenter {
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent) {
         TrackItemView trackItemView = TrackItemView_.build(parent.getContext());
+        trackItemView.setFocusable(true);
+        trackItemView.setFocusableInTouchMode(true);
         return new ViewHolder(trackItemView);
     }
 
