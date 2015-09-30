@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp">
+
+        <EditText
+            android:id="@+id/phone_number_input_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="Enter Phone Number (Required)"
+            android:inputType="phone"
+            android:maxEms="10"/>
+
+        <EditText
+            android:id="@+id/phone_extension_input_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:hint="Extension (Optional)"
+            android:inputType="phone"
+            android:maxEms="3"/>
+
+
+        <Button
+            android:id="@+id/track_by_phone_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TRACK ORDER"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:background="@android:color/holo_red_light"
+            android:enabled="false"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/main_browse_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>
