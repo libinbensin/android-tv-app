@@ -14,6 +14,7 @@ import android.support.v17.leanback.widget.OnActionClickedListener;
 
 import example.com.pizzatvapp.Movie;
 import example.com.pizzatvapp.R;
+import example.com.pizzatvapp.activity.CartTvActivity_;
 import example.com.pizzatvapp.presenter.HistoricalDetailsDescriptionPresenter;
 import example.com.pizzatvapp.presenter.HistoricalItemPresenter;
 
@@ -39,8 +40,8 @@ public class HistoricalOrderDetailFragment extends DetailsFragment {
 
         DetailsOverviewRow row = new DetailsOverviewRow(mSelectedMovie);
 
-        row.addAction(new Action(1, "CANCEL"));
-        row.addAction(new Action(2, "REORDER"));
+        row.addAction(new Action(1, "REORDER"));
+        row.addAction(new Action(2, "CANCEL"));
         updateDetail(row);
     }
 
@@ -53,12 +54,11 @@ public class HistoricalOrderDetailFragment extends DetailsFragment {
         mDorPresenter.setOnActionClickedListener(new OnActionClickedListener() {
             @Override
             public void onActionClicked(Action action) {
-                if(action.getId() == 1) {
-                    getActivity().finish();
-                }else if(action.getId() == 2) {
+                if (action.getId() == 1) {
                     // go to cart
-
+                    CartTvActivity_.intent(getActivity()).start();
                 }
+                getActivity().finish();
             }
         });
 
