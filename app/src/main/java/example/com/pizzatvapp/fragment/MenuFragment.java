@@ -12,7 +12,9 @@ import android.support.v17.leanback.widget.Row;
 import android.support.v17.leanback.widget.RowPresenter;
 
 import example.com.pizzatvapp.GridItemPresenter;
+import example.com.pizzatvapp.Movie;
 import example.com.pizzatvapp.R;
+import example.com.pizzatvapp.activity.DetailTVActivity_;
 import example.com.pizzatvapp.activity.TrackByPhoneActivity_;
 import example.com.pizzatvapp.presenter.HistoricalItemPresenter;
 import example.com.pizzatvapp.model.TrackItem;
@@ -100,7 +102,11 @@ public class MenuFragment extends BrowseFragment {
         public void onItemClicked(Presenter.ViewHolder itemViewHolder, Object item,
                                   RowPresenter.ViewHolder rowViewHolder, Row row) {
 
-            if(item instanceof TrackItem) {
+
+            if(item instanceof String){
+                DetailTVActivity_.intent(getActivity()).start();
+            }
+            else if(item instanceof TrackItem) {
                 TrackItem trackItem = (TrackItem) item;
                 if(trackItem.getTitle().equals("ENTER PHONE #")) {
                     TrackByPhoneActivity_.intent(getActivity()).start();

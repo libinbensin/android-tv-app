@@ -30,6 +30,12 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".activity.DetailTVActivity_"
+            android:screenOrientation="landscape"/>
+
+        <activity android:name=".activity.CartTvActivity_"
+            android:screenOrientation="landscape"/>
+
         <activity android:name=".activity.TrackByPhoneActivity_"
             android:screenOrientation="landscape"/>
 
